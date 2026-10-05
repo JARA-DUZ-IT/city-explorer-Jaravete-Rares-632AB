@@ -1,7 +1,7 @@
 # Jurnal de utilizare AI - Laboratorul 1
 ## Asistenta AI - Google Gemini
 
-In realizarea acestui prim laborator, am folosit inteligenta artificiala Google Gemini pentru a ma ajuta in urmatoarele aspecte:
+## In realizarea acestui prim laborator, am folosit inteligenta artificiala Google Gemini pentru a ma ajuta in urmatoarele aspecte:
 
 Analizarea si extragerea rapida a cerintelor din documentul PDF cu instructiunile laboratorului.
 
@@ -11,7 +11,7 @@ Explicarea si rezolvarea unor probleme intampinate cu Git in terminal (de exempl
 
 Intelegerea pasilor finali pentru incarcarea proiectului pe platforma GitHub si redenumirea unui repository.
 
-Contributia si intelegerea mea
+## Contributia si intelegerea mea:
 Declar ca am inteles codul generat si explicatiile primite. Conceptele predate (HTML semantic, modelul cutiei, Flexbox, Grid, si fluxul de lucru Git/GitHub) imi sunt clare.
 
 Contributia mea personala la acest proiect a constat in:

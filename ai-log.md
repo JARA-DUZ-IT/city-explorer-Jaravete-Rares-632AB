@@ -1,5 +1,5 @@
 # Jurnal de utilizare AI - Laboratorul 1
-Asistenta AI
+## Asistenta AI - Google Gemini
 
 In realizarea acestui prim laborator, am folosit inteligenta artificiala Google Gemini pentru a ma ajuta in urmatoarele aspecte:
 

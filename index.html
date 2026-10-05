@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Explorer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <h1>City Explorer</h1>
+        <nav class="menu">
+            <a href="#destinatii">Destinatii</a>
+            <a href="#planifica">Planifica</a>
+            <a href="#recomandari">Recomandari</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="destinatii">
+            <h2>Destinatii</h2>
+            <div class="cards">
+                <article class="card featured">
+                    <h3>Roma</h3>
+                    <p><strong>Tara:</strong> Italia</p>
+                    <p>Faimoasa pentru Colosseum si istoria sa bogata.</p>
+                    <p><em>Durata recomandata: 4 zile</em></p>
+                </article>
+                <article class="card">
+                    <h3>Paris</h3>
+                    <p><strong>Tara:</strong> Franta</p>
+                    <p>Orasul luminilor si al turnului Eiffel.</p>
+                    <p><em>Durata recomandata: 3 zile</em></p>
+                </article>
+                <article class="card">
+                    <h3>Lisabona</h3>
+                    <p><strong>Tara:</strong> Portugalia</p>
+                    <p>Plina de culoare, dealuri si pasteis de nata.</p>
+                    <p><em>Durata recomandata: 4 zile</em></p>
+                </article>
+                <article class="card">
+                    <h3>Tokyo</h3>
+                    <p><strong>Tara:</strong> Japonia</p>
+                    <p>O metropola vibranta ce imbina perfect tehnologia cu traditia.</p>
+                    <p><em>Durata recomandata: 7 zile</em></p>
+                </article>
+                <article class="card">
+                    <h3>Praga</h3>
+                    <p><strong>Tara:</strong> Cehia</p>
+                    <p>Orasul celor 100 de turle, o capodopera arhitecturala.</p>
+                    <p><em>Durata recomandata: 3 zile</em></p>
+                </article>
+            </div>
+        </section>
+
+        <section id="planifica">
+            <h2>Planifica</h2>
+            <form action="#">
+                <label for="name">Nume</label>
+                <input id="name" name="name" type="text">
+
+                <label for="destination">Destinatie</label>
+                <select id="destination" name="destination">
+                    <option value="">Alege...</option>
+                    <option value="Roma">Roma</option>
+                    <option value="Paris">Paris</option>
+                    <option value="Lisabona">Lisabona</option>
+                    <option value="Tokyo">Tokyo</option>
+                    <option value="Praga">Praga</option>
+                </select>
+
+                <label for="days">Numar de zile</label>
+                <input id="days" name="days" type="number">
+
+                <button type="submit">Planifica excursia</button>
+            </form>
+        </section>
+
+        <section id="recomandari">
+            <h2>Recomandari de calatorie</h2>
+            <ul>
+                <li>Cumpara biletele pentru atractiile turistice online, in avans.</li>
+                <li>Verifica prognoza meteo cu 2 zile inainte de zbor pentru a-ti pregati bagajul optim.</li>
+                <li>Pastreaza mereu la tine o baterie externa pentru telefon.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        Rares Andrei Jaravete, 2026
+    </footer>
+</body>
+</html>

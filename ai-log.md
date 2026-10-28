@@ -26,7 +26,7 @@
 
 * Executarea independenta a comenzilor in terminal pentru initializarea sistemului Git, pregatirea fisierelor (git add), salvarea lor cu mesaje descriptive (git commit) si publicarea lor finala pe platforma GitHub (git push).
 
-** https://share.gemini.google/1mdd7OZ6v7Vn **
+**https://share.gemini.google/1mdd7OZ6v7Vn**
 
 # Jurnal de utilizare AI - Laboratorul 2
 ## Asistenta AI - Google Gemini

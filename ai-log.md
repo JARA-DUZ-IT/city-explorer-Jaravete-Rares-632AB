@@ -54,3 +54,48 @@ Contributia mea personala la acest proiect a constat in:
 * Gestionarea independenta a serverului local (`npm run dev`) si executarea comenzilor Git pentru pregatirea si salvarea proiectului.
 
 **https://share.gemini.google/i8lIFkWjL9go**
+
+# Jurnal de utilizare AI - Laboratorul 3
+## Asistenta AI - Google Gemini
+
+## In realizarea acestui laborator, am folosit inteligenta artificiala Google Gemini pentru a ma ajuta in urmatoarele aspecte:
+
+* Analizarea documentului PDF aferent Laboratorului 3 (Componente React, props si state - Proiect City Explorer) si extragerea cerintelor specifice exercitiilor 1, 2 si 3.
+
+* Crearea si structurarea componentelor React din proiect (DestinatieCard.jsx, ListaDestinatii.jsx, Rezumat.jsx, FormularDestinatie.jsx si App.jsx).
+
+* Explicarea si implementarea transmiterii datelor prin props si a gestionarii starii aplicatiei folosind Hook-ul useState.
+
+* Randarea listelor de date folosind metoda map si atributul key, impreuna cu tratarea evenimentelor (onClick, onSubmit si prevenirea reincarcarii paginii prin preventDefault).
+
+* Adaugarea cerintei suplimentare pentru stergerea unei destinatii prin crearea si integrarea functiei stergeDestinatie in starea aplicatiei si pe carduri.
+
+* Depanarea erorilor si problemelor de configurare/stil intampinate pe parcurs:
+
+* Identificarea si rezolvarea erorii ENOENT la rularea npm run dev prin navigarea in subdirectorul corect (cd app).
+
+* Rezolvarea erorii Uncaught SyntaxError din main.jsx (does not provide an export named 'formatDestinatie') prin curatarea codului si importurilor ramasite din Laboratorul 2.
+
+* Ajustarea si completarea stilurilor CSS in App.css si index.css pentru alinierea corecta a cardurilor in grila (Grid Layout) si aplicarea stilurilor dinamice pentru destinatiile vizitate.
+
+## Contributia si intelegerea mea:
+
+* Declar ca am inteles codul generat si explicatiile primite. Conceptele predate (arborescenta componentelor React, imutabilitatea starii cu useState, fluxul unidirectional al datelor prin props si urcarea evenimentelor) imi sunt clare.
+
+* Contributia mea personala la acest proiect a constat in:
+
+* Crearea manuala a directorului src/components necesar pentru plasarea componentelor React.
+
+* Preluarea, organizarea si integrarea pas cu pas a codului in fisierele .jsx aferente fiecarei componente.
+
+* Inlocuirea si curatarea fisierelor de stil (index.css si App.css) si a fisierului de intrare main.jsx.
+
+* Pornirea si gestionarea serverului local de dezvoltare (npm run dev) din directorul app.
+
+* Testarea interactiva si vizuala a aplicatiei in browser la adresa http://localhost:5173 (schimbarea starii de vizitat, adaugarea de noi destinatii, stergerea destinatiilor si validarea campurilor din formular).
+
+* Semnalarea erorilor din consola browserului (F12) si terminal, urmata de aplicarea remediilor necesare.
+
+* Executarea comenzilor Git pentru salvarea si incarcarea proiectului pe GitHub.
+
+**https://share.gemini.google/rqcAFwJXioHT**

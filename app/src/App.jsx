@@ -1,6 +1,12 @@
 import { useState } from 'react';
 import { destinatii as destinatiiInitiale } from './data/destinatii.js';
-import { getNevizitate, totalZile, marcheazaVizitat, adaugaDestinatie } from './utils/destinatii.js';
+import {
+  getNevizitate,
+  totalZile,
+  marcheazaVizitat,
+  adaugaDestinatie,
+  stergeDestinatie
+} from './utils/destinatii.js';
 import ListaDestinatii from './components/ListaDestinatii.jsx';
 import Rezumat from './components/Rezumat.jsx';
 import FormularDestinatie from './components/FormularDestinatie.jsx';
@@ -21,12 +27,20 @@ export default function App() {
     setDestinatii((curent) => adaugaDestinatie(curent, nouaDestinatie));
   }
 
+  function handleDelete(id) {
+    setDestinatii((curent) => stergeDestinatie(curent, id));
+  }
+
   return (
     <main>
       <h1>City Explorer</h1>
       <Rezumat total={total} nevizitate={nevizitate} zile={zile} />
       <FormularDestinatie onAdd={handleAdd} />
-      <ListaDestinatii destinatii={destinatii} onToggle={handleToggle} />
+      <ListaDestinatii
+        destinatii={destinatii}
+        onToggle={handleToggle}
+        onDelete={handleDelete}
+      />
     </main>
   );
 }

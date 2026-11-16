@@ -1,34 +1,99 @@
 import { useState } from 'react';
 
-export default function FormularDestinatie({ onAdd }) {
-  const [oras, setOras] = useState('');
-  const [tara, setTara] = useState('');
-  const [zile, setZile] = useState('');
+// Funcția de validare (Exercițiul 2b)
+function valideaza(valori) {
+  const erori = {};
+  
+  if (valori.oras.trim().length < 2) {
+    erori.oras = 'Orașul are cel puțin două caractere.';
+  }
+  
+  if (valori.tara.trim() === '') {
+    erori.tara = 'Țara este obligatorie.';
+  }
+  
+  const nrZile = Number(valori.zile);
+  if (valori.zile === '' || Number.isNaN(nrZile) || nrZile < 1 || nrZile > 30) {
+    erori.zile = 'Numărul de zile este între 1 și 30.';
+  }
+  
+  return erori;
+}
+
+export default function FormularDestinatie({ onAdd, seTrimite }) {
+  // Toate valorile într-un singur obiect (Exercițiul 2a)
+  const [valori, setValori] = useState({ oras: '', tara: '', zile: '' });
+  const [erori, setErori] = useState({});
+
+  function handleChange(event) {
+    const { name, value } = event.target;
+    setValori((curent) => ({ ...curent, [name]: value }));
+  }
 
   function handleSubmit(event) {
     event.preventDefault();
-    if (!oras || !tara) return;
+    
+    const mesaje = valideaza(valori);
+    setErori(mesaje); // Afișăm mesajele (Exercițiul 2c)
 
-    const nouaDestinatie = {
-      id: crypto.randomUUID(),
-      oras: oras,
-      tara: tara,
-      zile: Number(zile),
+    // Dacă obiectul de erori are chei, ne oprim
+    if (Object.keys(mesaje).length > 0) {
+      return;
+    }
+
+    // Altfel, trimitem datele
+    onAdd({
+      oras: valori.oras.trim(),
+      tara: valori.tara.trim(),
+      zile: Number(valori.zile),
       vizitat: false
-    };
+    });
 
-    onAdd(nouaDestinatie);
-    setOras('');
-    setTara('');
-    setZile('');
+    // Golește formularul după trimitere cu succes
+    setValori({ oras: '', tara: '', zile: '' });
+    setErori({});
   }
 
   return (
-    <form className="formular" onSubmit={handleSubmit}>
-      <input type="text" placeholder="Oraș" value={oras} onChange={(e) => setOras(e.target.value)} />
-      <input type="text" placeholder="Țară" value={tara} onChange={(e) => setTara(e.target.value)} />
-      <input type="number" placeholder="Zile" value={zile} onChange={(e) => setZile(e.target.value)} />
-      <button type="submit">Adaugă</button>
+    <form className="formular" onSubmit={handleSubmit} noValidate>
+      {/* Fiecare input este învelit în div-ul camp (Exercițiul 2a) */}
+      <div className="camp">
+        <input
+          name="oras"
+          placeholder="Oraș"
+          value={valori.oras}
+          onChange={handleChange}
+          className={erori.oras ? 'invalid' : ''}
+        />
+        {erori.oras && <p className="eroare-camp">{erori.oras}</p>}
+      </div>
+
+      <div className="camp">
+        <input
+          name="tara"
+          placeholder="Țară"
+          value={valori.tara}
+          onChange={handleChange}
+          className={erori.tara ? 'invalid' : ''}
+        />
+        {erori.tara && <p className="eroare-camp">{erori.tara}</p>}
+      </div>
+
+      <div className="camp">
+        <input
+          type="number"
+          name="zile"
+          placeholder="Zile"
+          value={valori.zile}
+          onChange={handleChange}
+          className={erori.zile ? 'invalid' : ''}
+        />
+        {erori.zile && <p className="eroare-camp">{erori.zile}</p>}
+      </div>
+
+      <button type="submit" disabled={seTrimite}>
+        {seTrimite ? 'Se trimite...' : 'Adaugă'}
+      </button>
     </form>
   );
 }
